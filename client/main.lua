@@ -22,7 +22,7 @@ end)
 function useCagoule()
     local closestPlayer, closestPlayerDistance = ESX.Game.GetClosestPlayer()
     if closestPlayer ~= -1 and closestPlayerDistance <= 3 then
-        TriggerServerEvent("useCagoule", GetPlayerServerId(closestPlayer))
+        TriggerServerEvent("useCagoule", GetPlayerServerId(closestPlayer), closestPlayerDistance)
     else
         ESX.ShowNotification("Personne dans les alentours")
     end
